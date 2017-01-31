@@ -1,0 +1,5 @@
+insert into person (id, name, age, address) values (hibernate_sequence.nextval, '权胖', 18, '深圳'); 
+insert into person (id, name, age, address) values (hibernate_sequence.nextval, '岩胖', 20, '深圳'); 
+insert into person (id, name, age, address) values (hibernate_sequence.nextval, '小美', 2, '中国'); 
+insert into person (id, name, age, address) values (hibernate_sequence.nextval, '小宝', 3, '深圳'); 
+insert into person (id, name, age, address) values (hibernate_sequence.nextval, '小胖胖', 1, '深圳'); 
