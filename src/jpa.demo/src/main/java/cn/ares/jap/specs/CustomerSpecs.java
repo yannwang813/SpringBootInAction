@@ -47,7 +47,7 @@ public class CustomerSpecs {
 								predicateList.add(cb.like(root.get(getAttribute(entity, attr.getName(), String.class)), "%" + attrValue + "%"));
 							}
 						} else {
-							predicateList.add(cb.equal(root.get(getAttribute(entity, attr.getName(), attr.getClass())), attrValue));
+							predicateList.add(cb.equal(root.get(getAttribute(entity, attr.getName(), attrValue.getClass())), attrValue));
 						}
 					}
 				}
