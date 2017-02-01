@@ -24,6 +24,7 @@ public class CustomerSpecs {
 		
 		// 获取当前实体的类型
 		
+		@SuppressWarnings("unchecked")
 		Class<T> clazz = (Class<T>) example.getClass();
 		
 		return new Specification<T>() {
@@ -55,6 +56,7 @@ public class CustomerSpecs {
 				return predicateList.isEmpty() ? cb.conjunction() : cb.and(Iterables.toArray(predicateList, Predicate.class));
 			}
 			
+			@SuppressWarnings("hiding")
 			private <E, T> SingularAttribute<T, E> getAttribute(EntityType<T> entity, String name, Class<E> clazz) {
 				return entity.getDeclaredSingularAttribute(name, clazz);
 			}

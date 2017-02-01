@@ -26,6 +26,7 @@ public class CustomRepositoryFactoryBean<T extends JpaRepository<S, ID>, S, ID e
 			super(entityManager);
 		}
 
+		@SuppressWarnings("unchecked")
 		@Override
 		protected <T, ID extends Serializable> SimpleJpaRepository<?, ?> getTargetRepository(
 				RepositoryInformation information, EntityManager entityManager) {
