@@ -38,7 +38,7 @@ public class CustomerSpecs {
 				
 				for(Attribute<T, ?> attr : entity.getDeclaredAttributes()) {
 					// 通过反射获得属性值
-					Object attrValue = ReflectionUtils.getField((Field) attr.getJavaMember(), example);
+					Object attrValue = ReflectionUtils.getField( (Field) attr.getJavaMember(), example);
 					if(attrValue != null) {
 						// 当当前属性为字符串类型时
 						if(attr.getJavaType() == String.class) {
