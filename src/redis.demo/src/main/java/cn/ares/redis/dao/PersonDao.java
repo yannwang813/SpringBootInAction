@@ -13,12 +13,14 @@ import cn.ares.redis.vo.Person;
 @Repository
 public class PersonDao {
 
+	@SuppressWarnings("unused")
 	@Autowired
 	private StringRedisTemplate stringRedisTemplate;
 	
 	@Resource(name="stringRedisTemplate")
 	private ValueOperations<String, String> valOpsStr;
 
+	@SuppressWarnings("unused")
 	@Autowired
 	private RedisTemplate<Object, Object> redisTemplate;
 	

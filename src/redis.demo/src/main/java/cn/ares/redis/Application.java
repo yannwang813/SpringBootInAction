@@ -19,12 +19,12 @@ public class Application {
 		SpringApplication.run(Application.class, args);
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
 	public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
 		RedisTemplate<Object, Object> template = new RedisTemplate<Object, Object>();
 		template.setConnectionFactory(redisConnectionFactory);
 		
-		@SuppressWarnings({ "rawtypes", "unchecked" })
 		ObjectMapper om = new ObjectMapper();
 		om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
 		om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
